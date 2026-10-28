@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Acceso · Arroyave H. Litigio</title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <style>
+    body{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+    .brand-side{background:var(--color-ink);color:#fff;padding:48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .brand-side:after{content:"";position:absolute;width:640px;height:640px;border:1px solid rgba(182,154,99,.16);border-radius:50%;right:-30%;bottom:-35%;pointer-events:none}
+    .brand-side img{width:300px;height:80px;object-fit:contain;object-position:left}
+    .brand-side .line{font-family:var(--font-display);font-size:clamp(36px,4vw,56px);line-height:1.08;letter-spacing:-.02em;font-weight:500;max-width:520px}
+    .brand-side .line em{color:var(--color-brass)}
+    .brand-side .foot{font-size:12px;color:#A9B6BA;letter-spacing:.12em;text-transform:uppercase}
+    .brand-side .rule{width:48px;height:1px;background:var(--color-brass);margin-bottom:24px}
+    .form-side{display:flex;align-items:center;justify-content:center;padding:48px 24px}
+    .card{width:100%;max-width:440px}
+    .card h1{font-size:44px;margin:16px 0 10px}
+    .card>p{color:var(--color-muted);font-size:15px;margin-bottom:32px}
+    form{display:grid;gap:18px}
+    .button{width:100%}
+    .back{margin-top:28px;font-size:14px}
+    .back a{color:var(--color-teal)}
+    .demo{margin-top:32px;padding:18px 20px;background:#fff;border:1px dashed #8A969A;border-radius:6px;font-size:13px;color:var(--color-muted);line-height:1.7}
+    .demo strong{color:var(--color-ink)}
+    .demo code{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:var(--color-ivory);padding:1px 6px;border-radius:3px;color:var(--color-ink)}
+    .demo button{display:block;margin-top:6px}
+    .pw-wrap{position:relative}
+    .pw-wrap button{position:absolute;right:4px;top:4px;min-height:40px;padding:0 12px;background:transparent;border:0;font-size:12px;font-weight:600;color:var(--color-teal)}
+    @media(max-width:899px){body{grid-template-columns:1fr}.brand-side{padding:28px 24px;gap:28px}.brand-side img{width:220px;height:60px}.brand-side .line{font-size:30px;max-width:100%}.brand-side:after{display:none}.form-side{padding:36px 20px 48px;align-items:flex-start}.card h1{font-size:38px}}
+  </style>
+</head>
+<body>
+<aside class="brand-side">
+  <a href="/" aria-label="Volver al sitio web"><img src="/img/logo-primary-reversed.svg" alt="Arroyave H. Litigio"></a>
+  <div><span class="rule"></span><p class="line">Un espacio para tener el siguiente paso <em>a la vista.</em></p></div>
+  <p class="foot">Plataforma privada · Clientes y equipo</p>
+</aside>
+<main class="form-side">
+  <div class="card">
+    <p class="eyebrow rule">Acceso a la plataforma</p>
+    <h1>Iniciar sesión</h1>
+    <p>Ingrese con el correo y la contraseña que le entregó el despacho.</p>
+    <form id="login-form" novalidate>
+      <label class="field">Correo electrónico<input name="email" type="email" autocomplete="username" required placeholder="nombre@ejemplo.com" autofocus></label>
+      <label class="field">Contraseña<span class="pw-wrap"><input name="password" type="password" autocomplete="current-password" required minlength="1" placeholder="Su contraseña"><button type="button" id="toggle-pw" aria-label="Mostrar contraseña">Mostrar</button></span></label>
+      <p id="login-error" class="alert danger" role="alert" hidden></p>
+      <button class="button primary" type="submit" id="login-submit">Ingresar <span class="arrow" aria-hidden="true">→</span></button>
+    </form>
+    <p class="back">¿Olvidó su contraseña? Comuníquese con el despacho para restablecerla. · <a href="/">Volver al sitio</a></p>
+    <div class="demo" id="demo-box" hidden>
+      <strong>Cuentas de ejemplo</strong> (datos ficticios, se cargan en el primer arranque):<br>
+      Administración: <code>admin@arroyaveh.co</code> / <code>Admin2026*</code><br>
+      Abogados: <code>andres@arroyaveh.co</code>, <code>valentina@arroyaveh.co</code>, <code>julian@arroyaveh.co</code> / <code>Demo2026*</code><br>
+      Asistente: <code>laura@arroyaveh.co</code> / <code>Demo2026*</code><br>
+      Clientes: <code>cliente@ejemplo.co</code>, <code>cliente2@ejemplo.co</code> / <code>Cliente2026*</code>
+    </div>
+  </div>
+</main>
+<script src="/js/acceso.js" defer></script>
+</body>
+</html>
